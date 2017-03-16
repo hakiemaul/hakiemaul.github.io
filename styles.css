@@ -207,7 +207,7 @@ footer {
 .social img {
   height: 20px;
 }
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 1000px) {
   .page {
     width: 80%;
     margin: 0 auto;
