@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #5D6063;
+}
+
+header {
+  text-align: center;
+  color: #FFF;
+}
+
+.jumbotron {
+  display: block;
+  position: relative;
+
+  font-family: serif;
+}
+
+.jumbotron::after {
+  content: "";
+  background: url(images/nature.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+nav {
+  background-color: white;
+  opacity: 0.7;
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+nav li {
+  list-style-type: none;
+
+
+  margin-top: .5em;
+  padding-bottom: .5em;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+
+.logo img {
+  height: 40px;
+  z-index: 1;
+}
+
+.logo p {
+  font-size: 26px;
+  margin-left: 10px;
+  position: relative;
+  top: 5px;
+}
+
+li .logo {
+  align-items: center;
+}
+
+.emblem,
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  position: relative;
+  top: 5px;
+  padding-left: 10px;
+}
+
+.menu li {
+
+  border-top: 2px solid grey;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10px;
+  font-size: 18px;
+}
+
+.head {
+  text-align: center;
+  padding: 100px 0;
+  color: black;
+  line-height: 4em;
+}
+
+.head h1 {
+  font-size: 54px;
+}
+
+.image img {
+  width: 100%;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.content p,
+.content h2 {
+  margin: 10px 0;
+}
+
+footer {
+  font-family: serif;
+  text-align: center;
+}
