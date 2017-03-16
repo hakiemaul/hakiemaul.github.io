@@ -1,5 +1,5 @@
 ## About This Site
-Webpage ini merupakan hasil dari weekly project pertama dari phase 0 hacktiv8 dengan menggunakan HTML dan CSS. Webpage ini dibangun dengan desain responsif. Dalam pembuatan laman ini, saya menggunakan firefox 50.0, chromium 51.0.2684.0 serta edge 38.14393.0.0 versi desktop sebagai referensi hasil akhir tampilan. 
+Webpage ini merupakan hasil dari weekly project pertama dari phase 0 hacktiv8 dengan menggunakan HTML dan CSS. Webpage ini dibangun dengan desain responsif. Dalam pembuatan laman ini, saya menggunakan firefox 50.0, chromium 51.0.2684.0 serta edge 38.14393.0.0 versi desktop sebagai referensi hasil akhir tampilan. Penggunaan laman di perangkat kecil masih belum optimal.
 
 ## Used Tags &amp; Entities
 Berikut adalah daftar tag HTML dan CSS yang digunakan:
