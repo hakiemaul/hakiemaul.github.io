@@ -26,6 +26,7 @@ header {
 .jumbotron::after {
   content: "";
   background: url(images/nature.jpg);
+  background-attachment: fixed;
   opacity: 0.5;
   top: 0;
   left: 0;
@@ -53,7 +54,6 @@ nav ul {
 
 nav li {
   list-style-type: none;
-
 
   margin-top: .5em;
   padding-bottom: .5em;
@@ -88,13 +88,25 @@ li .logo {
   flex-direction: row;
   justify-content: space-around;
 
+  font-family: 'PT Serif', serif;
   position: relative;
   top: 5px;
   padding-left: 10px;
 }
 
-.menu li {
+.menu a {
+  text-decoration: none;
+  color: black;
+}
 
+.menu a:hover {
+  color: darkblue;
+}
+
+.menu a:active {
+  color: red;
+}
+.menu li {
   border-top: 2px solid grey;
 }
 .container {
@@ -109,6 +121,7 @@ li .logo {
   padding: 100px 0;
   color: black;
   line-height: 4em;
+  font-family: 'Playfair Display', serif;
 }
 
 .head h1 {
@@ -121,6 +134,11 @@ li .logo {
   margin-bottom: 30px;
 }
 
+.opening p {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 15px;
+}
 .content p,
 .content h2 {
   margin: 10px 0;
@@ -129,4 +147,49 @@ li .logo {
 footer {
   font-family: serif;
   text-align: center;
+}
+
+.form-row textarea {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 14px;
+
+    border: 1px solid #d6d9dc;
+    border-radius: 3px;
+
+    min-height: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 7px;
+  }
+@media only screen and (min-width: 961px) {
+  .page {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu li {
+    justify-content: flex-end;
+    margin-left: 30px;
+  }
+
+  .image {
+    width: 90%;
+    margin-right: 20px;
+  }
+
+
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .container:last-of-type {
+    flex-direction: row;
+  }
+
 }
