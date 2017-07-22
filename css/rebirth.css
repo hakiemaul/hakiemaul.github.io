@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.jumbotron.jumbotron-fluid {
+    height: 100vh;
+    min-height: 400px;
+}
+
+.jumbotron {
+  background-image: url("../images/jumbo.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.col.text-center {
+    background: #1a1e2b;
+    color: #fdf4cd;
+    border-radius: 20px;
+    margin-top: 10%;
+    opacity: 0.7;
+    -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
+.col.text-center:hover {
+  opacity: 1;
+}
+
+#jumbo-container {
+  height: 100%;
+}
+
+li.nav-item {
+    border-radius: 10px;
+    background: #fdf4cd;
+    margin: 10px;
+    color: #1a1e2b;
+    opacity: 0.3;
+}
+
+li.nav-item:hover {
+    opacity: 1;
+    -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  /* ...and now for the proper property */
+  transition:.2s;
+}
