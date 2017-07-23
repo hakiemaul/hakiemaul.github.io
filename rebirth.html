@@ -7,92 +7,152 @@
     <title>Aulia Hakiem Noersedya</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/rebirth.css">
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <header>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container" id="jumbo-container">
-          <div class="row">
-            <div class="col text-center">
-              <h1 class="display-4">Aulia Hakiem Noersedya</h1>
+    <div id="app">
+      <header>
+        <div class="jumbotron jumbotron-fluid" style="margin-bottom: 0">
+          <div class="container" id="jumbo-container">
+            <div class="row">
+              <div class="col text-center">
+                <h1 class="display-4">Aulia Hakiem Noersedya</h1>
+              </div>
+            </div>
+            <div class="row align-items-end" style="height: 50%">
+              <div class="col-6 offset-3">
+                <ul class="nav nav-pills nav-fill">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="row align-items-end" style="height: 50%">
-            <div class="col-6 offset-3">
-              <ul class="nav nav-pills nav-fill">
-                <li class="nav-item">
-                  <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Projects</a>
-                </li>
-              </ul>
+        </div>
+      </header>
+      <div id="about">
+        <div class="container">
+          <div class="row content-row">
+            <div class="col-md-4 col-xs-12">
+              <div class="row">
+                <h2>I'm Aulia Hakiem, a geoscientist turned a developer.</h2>
+                <p>A "try-hard" Bachelor of Science from Institut Teknologi Bandung. An avid learner and a graduate from Hacktiv8's full stack web developer bootcamp. A leader and a friend. Always deliver his best at anything. Not artistic, but appreciate beauty.</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-xs-12 offset-md-1">
+              <div class="row">
+                <h2>My skillset</h2>
+              </div>
+              <div class="row flex-column">
+                <p class="title"><strong>Front-end</strong></p>
+                <p>HTML5, CSS3, Javascript, jQuery, React.js with Redux, Vue.js with Vuex</p>
+              </div>
+              <div class="row flex-column">
+                <p class="title"><strong>Back-end</strong></p>
+                <p>Node.js, Express.js, APIs, SQL, NoSQL, Cache with Redis</p>
+              </div>
+              <div class="row flex-column">
+                <p class="title"><strong>Mobile</strong></p>
+                <p>React Native with Native Base or Element</p>
+              </div>
+              <div class="row flex-column">
+                <p class="title"><strong>Cloud</strong></p>
+                <p>AWS, GCP, Firebase</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-xs-12 offset-md-1">
+              <div class="row flex-column">
+                <h2>Dreams</h2>
+              </div>
+              <div class="row flex-column">
+                <p>A glimpse of my pipe dreams..</p>
+              </div>
+              <div class="row">
+                <ul>
+                  <li>Board a trans-siberian train</li>
+                  <li>Ride a hot air balloon</li>
+                  <li>Run a triathlon</li>
+                  <li>Speak in a tech conference</li>
+                  <li>Work at Tesla</li>
+                  <li>...</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row content-row">
+            <div class="col-md-4 col-xs-12">
+              <div class="row flex-column">
+                <h2>Recent Blogs</h2>
+                <p>The latest of my Medium post</p>
+                <div v-for="blog in blogs">
+                  <p class="title"><a :href="blog.link">{{ blog.title }}</a></p>
+                  <p><small>{{ new Date(blog.pubDate).toDateString() }}</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-xs-12 offset-md-1">
+              <div class="row flex-column">
+                <h2>Reading List</h2>
+                <div v-for="book in books">
+                  <p class="title">{{ book.title }}</p>
+                  <p><small>by {{ book.author }}</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-xs-12 offset-md-1">
+              <div class="row flex-column">
+                <h2>Follow me</h2>
+                <p>Facebook / Twitter / Medium / Github</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
-    <content>
-      <div class="container" id="about">
-        <div class="row content-row">
-          <div class="col-md-4 col-xs-12">
-            <div class="row">
-              <h2>I'm Aulia Hakiem, a geoscientist turned a developer.</h2>
-              <p>I've always aspire to build a product people can be attached to.</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-xs-12 offset-md-1">
-            <div class="row">
-              <h2>My skillset</h2>
-            </div>
-            <div class="row flex-column">
-              <p class="title"><strong>Front-end</strong></p>
-              <p>HTML5, CSS3, Javascript, jQuery, React.js with Redux, Vue.js with Vuex</p>
-            </div>
-            <div class="row flex-column">
-              <p class="title"><strong>Back-end</strong></p>
-              <p>Node.js, Express.js, APIs, SQL, NoSQL, Cache with Redis</p>
-            </div>
-            <div class="row flex-column">
-              <p class="title"><strong>Mobile</strong></p>
-              <p>React Native with Native Base or Element</p>
-            </div>
-            <div class="row flex-column">
-              <p class="title"><strong>Cloud</strong></p>
-              <p>AWS, GCP, Firebase</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-xs-12 offset-md-1">
-            <div class="row flex-column">
-              <h2>Dreams</h2>
-            </div>
-            <div class="row flex-column">
-              <p>A glimpse of my pipe dreams..</p>
-            </div>
-            <div class="row">
-              <ul>
-                <li>Board a trans-siberian train</li>
-                <li>Ride a hot air balloon</li>
-                <li>Run a triathlon</li>
-                <li>Speak in a tech conference</li>
-                <li>Work in Tesla</li>
-                <li>...</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-xs-12 content-row">
-            <div class="row">
-              <h2>Recent Blogs</h2>
-              <p>I've always aspire to build a product people can be attached to.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </content>
+    </div>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var app = new Vue({
+        el: '#app',
+        data: {
+          blogs: [],
+          books: []
+        },
+        methods: {
+          getBlog: function () {
+            var self = this
+            axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40hakiemaul')
+            .then(response => {
+              self.blogs = response.data.items.slice(0, 5)
+            })
+          },
+          getBooks: function () {
+            var self = this
+            axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.goodreads.com%2Freview%2Flist_rss%2F69696337%3Fkey%3DKt_Vre8mSb4JqwSkImm1J1jg67cr6EHOMsxA_NO0pcmu3SQS%26shelf%3D%2523ALL%2523')
+            .then(response => {
+              let books = response.data.items.map(book => {
+                let splitAuthor = book.content.split('author: ')
+                let getAuthor = splitAuthor[1].split('<br>')
+                return {
+                  title: book.title,
+                  author: getAuthor[0]
+                }
+              })
+              self.books = books
+            })
+          }
+        },
+        created () {
+          this.getBlog()
+          this.getBooks()
+        }
+      })
+    </script>
   </body>
 </html>

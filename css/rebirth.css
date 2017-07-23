@@ -63,3 +63,9 @@ li.nav-item:hover {
 .title {
   margin-bottom: .1em;
 }
+
+#about {
+  padding: 50px;
+  background-color: #abc9bd;
+  color: #141f34;
+}
