@@ -54,17 +54,61 @@ li.nav-item:hover {
   transition:.3s;
 }
 
+#about {
+  padding: 30px;
+  background-color: #abc9bd;
+  color: #141f34;
+}
+
 .content-row {
-  min-height: 50vh;
-  margin-bottom: 100px;
+  min-height: 40vh;
+  margin-bottom: 30px;
+}
+
+.get-space {
+  margin-bottom: 30px;
 }
 
 .title {
   margin-bottom: .1em;
 }
 
-#about {
+#projects {
   padding: 50px;
-  background-color: #abc9bd;
-  color: #141f34;
+}
+
+.each-project {
+  visibility: hidden;
+}
+
+.project-slide-right {
+  visibility: visible;
+  animation-name: slideRight;
+  -webkit-animation-name: slideRight;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes slideRight {
+
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+
+}
+
+@-webkit-keyframes slideRight {
+
+    0% {
+        -webkit-transform: translateX(-150%);
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+
 }
