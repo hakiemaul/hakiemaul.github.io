@@ -74,7 +74,7 @@ li.nav-item:hover {
 }
 
 #projects {
-  padding: 50px;
+  padding: 30px;
 }
 
 .each-project {
@@ -94,7 +94,7 @@ li.nav-item:hover {
 @keyframes slideRight {
 
     0% {
-        transform: translateX(-150%);
+        transform: translateX(-100%);
     }
     100% {
         transform: translateX(0%);
